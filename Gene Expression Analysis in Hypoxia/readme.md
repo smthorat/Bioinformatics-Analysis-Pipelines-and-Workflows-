@@ -1,76 +1,59 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2818
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red255\green255\blue255;}
-{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+# Differential Gene Expression and Pathway Analysis
 
-\f0\fs32 \cf0 \expnd0\expndtw0\kerning0
-# Gene Expression Analysis Project\
-\
-## Overview\
-\
-This project analyzes gene expression data to identify enriched biological pathways under different conditions in **LNCAP** and **PC3** cell lines. The analysis includes differential expression and pathway enrichment using the **DESeq2** and **clusterProfiler** packages in R.\
-\
-## Objectives\
-\
-- Analyze gene expression data from **LNCAP** and **PC3** cell lines.\
-- Identify differentially expressed genes (DEGs) between **hypoxia** and **normoxia** conditions.\
-- Perform pathway enrichment analysis to find significant biological processes.\
-\
-## Steps\
-\
-### 1. Data Preparation\
-\
-- **Load Data**: Import raw count data from CSV files.\
-- **Prepare Data**: Organize the data by setting row names and sorting columns.\
-\
-### 2. Differential Expression Analysis\
-\
-- **Create DESeq2 Object**: Use `DESeqDataSetFromMatrix` to create a DESeq2 object with count data and condition information.\
-- **Run DESeq2**: Perform differential expression analysis to identify DEGs.\
-\
-### 3. Normalization\
-\
-- **Normalize Counts**: Obtain normalized counts using the `counts` function with `normalized = TRUE`.\
-\
-### 4. Pathway Enrichment Analysis\
-\
-- **Perform Enrichment**: Use `clusterProfiler` to conduct GO enrichment analysis for biological processes (BP).\
-- **Visualize Results**: Create dot plots to visualize enriched pathways for each condition comparison.\
-\
-### 5. Visualization\
-\
-- **Volcano Plots**: Generate volcano plots to visualize DEGs.\
-- **Pathway Plots**: Use dot plots to display top enriched pathways, focusing on gene names for clarity.\
-\
-## Key Functions and Packages\
-\
-- **DESeq2**: For differential expression analysis.\
-- **clusterProfiler**: For GO enrichment analysis.\
-- **org.Hs.eg.db**: Annotation database for human genes.\
-- **ggplot2**: For creating visualizations.\
-- **gridExtra**: To arrange multiple plots in a grid layout.\
-- **tidyverse**: For data manipulation and visualization.\
-\
-## Requirements\
-\
-- R version 4.0 or higher\
-- R packages: DESeq2, clusterProfiler, org.Hs.eg.db, ggplot2, gridExtra, tidyverse\
-\
-## Files\
-\
-- `raw_counts.csv`: Contains raw gene expression counts.\
-- `GRCh38.p13_annotation.csv`: Annotation file for gene IDs.\
-- `*_GO_enrichment.csv`: Output files for GO enrichment results.\
-\
-## Visualization Example\
-\
-The attached image shows dot plots of enriched pathways for different conditions, highlighting the most significant biological processes.\
-\
-## Conclusion\
-\
-This project provides insights into the biological processes affected by hypoxia and normoxia in LNCAP and PC3 cell lines, aiding in understanding the underlying mechanisms of these conditions.\
-\
-Feel free to explore the code and modify it as needed for your specific research questions!}
+This project performs differential gene expression analysis and pathway enrichment analysis on RNA-seq data, comparing hypoxia and normoxia conditions in two prostate cancer cell lines, LNCaP and PC3. The analysis uses the DESeq2 package for identifying differentially expressed genes (DEGs) and the clusterProfiler package for functional enrichment analysis.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Data Description](#data-description)
+- [Analysis Pipeline](#analysis-pipeline)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Visualization](#visualization)
+- [File Structure](#file-structure)
+- [References](#references)
+
+## Introduction
+The goal of this project is to explore the gene expression changes under different oxygen conditions (hypoxia vs. normoxia) in two prostate cancer cell lines (LNCaP and PC3). Understanding these changes could help reveal pathways involved in the response to hypoxia, which is relevant to cancer progression and therapy resistance.
+
+## Data Description
+The analysis requires two main data files:
+1. **Raw Count Data (`raw_counts.csv`)**: Contains raw gene expression counts for each sample. The rows correspond to genes (Ensembl IDs), and the columns represent different samples.
+2. **Gene Annotation File (`GRCh38.p13_annotation.csv`)**: Provides annotations for the genes, including Ensembl IDs and gene names.
+
+The data should be structured as follows:
+- **Raw Counts Data**: The first column should contain Ensembl gene IDs, followed by columns representing different samples. Each cell contains the raw read counts for a gene in a given sample.
+- **Annotation File**: Must include at least two columns: "Gene.stable.ID" (Ensembl ID) and "Gene.name" (gene name).
+
+## Analysis Pipeline
+The analysis follows these steps:
+
+1. **Data Preparation**:
+   - Import the raw counts and annotation data.
+   - Format the data to make it suitable for analysis (set Ensembl IDs as row names, sort columns).
+
+2. **DESeq2 Analysis**:
+   - Create a `DESeqDataSet` object using the count data and sample conditions.
+   - Run the DESeq2 pipeline to normalize the data and perform differential expression analysis.
+   - Obtain lists of differentially expressed genes based on adjusted p-value and log2 fold change criteria.
+
+3. **Visualization**:
+   - Generate PCA plots to check for clustering based on conditions.
+   - Plot heatmaps showing sample distances.
+   - Create MA plots to visualize differential expression.
+
+4. **Pathway Enrichment Analysis**:
+   - Perform Gene Ontology (GO) enrichment analysis using `clusterProfiler`.
+   - Analyze the top enriched pathways for Biological Processes (BP).
+
+5. **Results Saving**:
+   - Save lists of DEGs and enriched pathways as CSV files.
+   - Export visualizations (PCA plots, heatmaps, GO enrichment plots).
+
+## Installation
+To run this analysis, make sure you have R and the required packages installed. You can install the necessary packages with:
+
+```R
+install.packages("BiocManager")
+BiocManager::install(c("DESeq2", "clusterProfiler", "org.Hs.eg.db", "pheatmap"))
+install.packages(c("tidyverse", "ggplot2", "gridExtra"))
