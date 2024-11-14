@@ -1,4 +1,4 @@
-# Assignment 2
+# Differential Expression and Gene Ontology Enrichment Analysis of SARS-CoV-2-Associated Transcriptomic Data
 
 ## Objective
 
