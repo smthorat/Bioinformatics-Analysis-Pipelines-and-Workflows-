@@ -18,4 +18,4 @@ Step by step explanations:
 	15	Create a volcano plot to visualize the relationship between log fold changes and adjusted p-values.
 	16	Display the volcano plot, showing significant changes in gene expression.
 
-The script performs differential gene expression analysis on RNA-Seq data using the DESeq2 package, identifying genes with significant expression changes between control and treated groups. It then visualizes the results with a volcano plot, highlighting genes with significant log fold changes and adjusted p-values.
+The script performs differential gene expression analysis on RNA-Seq data using the DESeq2 package, identifying genes with significant expression changes between control and treated groups. It then visualizes the results with a volcano plot, highlighting genes with significant log fold changes and adjusted p-values. 
