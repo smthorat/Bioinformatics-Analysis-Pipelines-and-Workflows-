@@ -1,0 +1,9 @@
+{
+    "cmdline": "sc_ref_mapper -i simpleaf_index/index/piscem_idx -g chromium_v3 -1 /N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_read_fastq/selected_R1_reads.fastq -2 /N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_read_fastq/selected_R2_reads.fastq -t 8 -o simpleaf_quant/af_map --max-ec-card 4096 --skipping-strategy permissive --max-hit-occ 256 --max-hit-occ-recover 1024 --max-read-occ 2500",
+    "mode": "sc-rna",
+    "num_mapped": 33239,
+    "num_poisoned": 0,
+    "num_reads": 34146,
+    "percent_mapped": 97.34375915187724,
+    "runtime_seconds": 0.0
+}

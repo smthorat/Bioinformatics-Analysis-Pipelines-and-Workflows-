@@ -1,0 +1,5 @@
+{
+  "cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry collate -i simpleaf_quant/af_quant -r simpleaf_quant/af_map -t 8",
+  "compressed_output": false,
+  "version_str": "0.11.1"
+}

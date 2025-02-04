@@ -1,0 +1,31 @@
+{
+  "cmd_info": {
+    "collate_cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry collate -i simpleaf_quant/af_quant -r simpleaf_quant/af_map -t 8",
+    "gpl_cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry generate-permit-list -i simpleaf_quant/af_map -d fw --unfiltered-pl alevin_fry_home/plist/2c9dfb98babe5a57ae763778adb9ebb7bfa531e105823bc26163892089333f8c --min-reads 10 -o simpleaf_quant/af_quant",
+    "map_cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/piscem map-sc --index simpleaf_index/index/piscem_idx --threads 8 -o simpleaf_quant/af_map --max-ec-card 4096 --skipping-strategy permissive --max-hit-occ 256 --max-hit-occ-recover 1024 --max-read-occ 2500 -1 /N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_read_fastq/selected_R1_reads.fastq -2 /N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_read_fastq/selected_R2_reads.fastq --geometry chromium_v3",
+    "quant_cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry quant -i simpleaf_quant/af_quant -o simpleaf_quant/af_quant -t 8 -m simpleaf_index/index/t2g_3col.tsv -r cr-like"
+  },
+  "map_info": {
+    "map_cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/piscem map-sc --index simpleaf_index/index/piscem_idx --threads 8 -o simpleaf_quant/af_map --max-ec-card 4096 --skipping-strategy permissive --max-hit-occ 256 --max-hit-occ-recover 1024 --max-read-occ 2500 -1 /N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_read_fastq/selected_R1_reads.fastq -2 /N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_read_fastq/selected_R2_reads.fastq --geometry chromium_v3",
+    "map_outdir": "simpleaf_quant/af_map",
+    "mapper": "piscem"
+  },
+  "time_info": {
+    "collate_time": {
+      "nanos": 106390363,
+      "secs": 0
+    },
+    "gpl_time": {
+      "nanos": 143728575,
+      "secs": 2
+    },
+    "map_time": {
+      "nanos": 308322875,
+      "secs": 0
+    },
+    "quant_time": {
+      "nanos": 80496200,
+      "secs": 0
+    }
+  }
+}

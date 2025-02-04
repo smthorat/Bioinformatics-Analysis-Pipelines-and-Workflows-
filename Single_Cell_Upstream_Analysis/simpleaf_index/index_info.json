@@ -1,0 +1,35 @@
+{
+  "args": {
+    "dedup": false,
+    "fasta": "/N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_human_ref/fasta/genome.fa",
+    "gtf": "/N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_human_ref/genes/genes.gtf",
+    "keep_duplicates": false,
+    "output": "simpleaf_index",
+    "overwrite": false,
+    "sparse": false,
+    "spliced": null,
+    "threads": 8,
+    "unspliced": null
+  },
+  "command": "index",
+  "gene_id_to_name": "simpleaf_index/ref/gene_id_to_name.tsv",
+  "t2g_file": "simpleaf_index/ref/t2g_3col.tsv",
+  "version_info": {
+    "alevin_fry": {
+      "exe_path": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry",
+      "version": "0.11.1"
+    },
+    "macs": {
+      "exe_path": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/macs3",
+      "version": "3.0.2"
+    },
+    "piscem": {
+      "exe_path": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/piscem",
+      "version": "0.12.0"
+    },
+    "salmon": {
+      "exe_path": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/salmon",
+      "version": "1.10.3"
+    }
+  }
+}

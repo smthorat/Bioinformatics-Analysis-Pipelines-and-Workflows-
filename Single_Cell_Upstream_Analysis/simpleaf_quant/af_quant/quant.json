@@ -1,0 +1,30 @@
+{
+  "alt_resolved_cell_numbers": [],
+  "cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry quant -i simpleaf_quant/af_quant -o simpleaf_quant/af_quant -t 8 -m simpleaf_index/index/t2g_3col.tsv -r cr-like",
+  "dump_eq": false,
+  "empty_resolved_cell_numbers": [],
+  "num_genes": 60,
+  "num_quantified_cells": 139,
+  "quant_options": {
+    "cmdline": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry quant -i simpleaf_quant/af_quant -o simpleaf_quant/af_quant -t 8 -m simpleaf_index/index/t2g_3col.tsv -r cr-like",
+    "dump_eq": false,
+    "filter_list": null,
+    "init_uniform": false,
+    "input_dir": "simpleaf_quant/af_quant",
+    "large_graph_thresh": 0,
+    "num_bootstraps": 0,
+    "num_threads": 8,
+    "output_dir": "simpleaf_quant/af_quant",
+    "pug_exact_umi": false,
+    "resolution": "CellRangerLike",
+    "sa_model": "WinnerTakeAll",
+    "small_thresh": 10,
+    "summary_stat": false,
+    "tg_map": "simpleaf_index/index/t2g_3col.tsv",
+    "use_mtx": true,
+    "version": "0.11.1"
+  },
+  "resolution_strategy": "CellRangerLike",
+  "usa_mode": true,
+  "version_str": "0.11.1"
+}

@@ -1,0 +1,32 @@
+{
+  "cmd_info": {
+    "index_cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/piscem build -k 31 -m 19 -o simpleaf_index/index/piscem_idx -s simpleaf_index/ref/roers_ref.fa --seed 1 -w ./workdir.noindex --threads 8",
+    "roers_cmd": {
+      "aug_type": [
+        "Intronic"
+      ],
+      "dedup_seqs": false,
+      "extra_spliced": null,
+      "extra_unspliced": null,
+      "filename_prefix": "roers_ref",
+      "flank_trim_length": 5,
+      "genes": "/N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_human_ref/genes/genes.gtf",
+      "genome": "/N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_human_ref/fasta/genome.fa",
+      "gff3": false,
+      "no_flanking_merge": false,
+      "no_transcript": false,
+      "out_dir": "simpleaf_index/ref",
+      "read_length": 90
+    }
+  },
+  "time_info": {
+    "index_time": {
+      "nanos": 201433447,
+      "secs": 71
+    },
+    "roers_time": {
+      "nanos": 312486899,
+      "secs": 5
+    }
+  }
+}

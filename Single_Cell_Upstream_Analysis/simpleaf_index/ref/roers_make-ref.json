@@ -1,0 +1,24 @@
+{
+  "args": {
+    "aug_type": [
+      "intronic"
+    ],
+    "dedup_seqs": false,
+    "extra_spliced": null,
+    "extra_unspliced": null,
+    "filename_prefix": "roers_ref.fa",
+    "flank_trim_length": 5,
+    "genes": "/N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_human_ref/genes/genes.gtf",
+    "genome": "/N/project/Krolab/Swaraj/single_cell/af_xmpl_run/toy_human_ref/fasta/genome.fa",
+    "gff3": false,
+    "no_flanking_merge": false,
+    "no_transcript": false,
+    "out_dir": "simpleaf_index/ref",
+    "read_length": 90
+  },
+  "command": "roers makeref",
+  "output_fasta": "simpleaf_index/ref/roers_ref.fa",
+  "output_gid2name": "simpleaf_index/ref/gene_id_to_name.tsv",
+  "output_t2g": "simpleaf_index/ref/t2g_3col.tsv",
+  "roers_version": "0.4.0"
+}

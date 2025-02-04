@@ -1,0 +1,23 @@
+{
+  "cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry generate-permit-list -i simpleaf_quant/af_map -d fw --unfiltered-pl alevin_fry_home/plist/2c9dfb98babe5a57ae763778adb9ebb7bfa531e105823bc26163892089333f8c --min-reads 10 -o simpleaf_quant/af_quant",
+  "expected_ori": "+",
+  "gpl_options": {
+    "cmdline": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/alevin-fry generate-permit-list -i simpleaf_quant/af_map -d fw --unfiltered-pl alevin_fry_home/plist/2c9dfb98babe5a57ae763778adb9ebb7bfa531e105823bc26163892089333f8c --min-reads 10 -o simpleaf_quant/af_quant",
+    "expected_ori": "Forward",
+    "fmeth": {
+      "UnfilteredExternalList": [
+        "alevin_fry_home/plist/2c9dfb98babe5a57ae763778adb9ebb7bfa531e105823bc26163892089333f8c",
+        10
+      ]
+    },
+    "input_dir": "simpleaf_quant/af_map",
+    "output_dir": "simpleaf_quant/af_quant",
+    "threads": 8,
+    "velo_mode": false,
+    "version": "0.11.1"
+  },
+  "max-ambig-record": 24,
+  "permit-list-type": "unfiltered",
+  "velo_mode": false,
+  "version_str": "0.11.1"
+}

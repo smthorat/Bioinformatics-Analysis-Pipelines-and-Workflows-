@@ -1,0 +1,12 @@
+{
+  "cmd": "/N/u/smthorat/Quartz/.conda/envs/singlecell/bin/piscem build -k 31 -m 19 -o simpleaf_index/index/piscem_idx -s simpleaf_index/ref/roers_ref.fa --seed 1 -w ./workdir.noindex --threads 8",
+  "index_type": "piscem",
+  "piscem_index_parameters": {
+    "k": 31,
+    "m": 19,
+    "overwrite": false,
+    "ref": "simpleaf_index/ref/roers_ref.fa",
+    "threads": 8
+  },
+  "t2g_file": "t2g_3col.tsv"
+}
