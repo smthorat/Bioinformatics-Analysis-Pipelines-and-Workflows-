@@ -1,5 +1,37 @@
 # Single-Cell ATAC-Seq Analysis of Human PBMCs
 
+
+
+Download data 
+https://stuartlab.org/signac/articles/pbmc_vignette#non-linear-dimension-reduction-and-clustering
+
+Following libraraies must be isntalled 
+
+# Install core packages
+install.packages(c("tidyverse", "data.table", "Matrix"))
+
+# Install Bioconductor packages
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(c("EnsDb.Hsapiens.v75", "biovizBase"))
+
+# Install Seurat and Signac for single-cell analysis
+install.packages("Seurat")
+BiocManager::install("Signac")
+
+# Install additional dependencies
+install.packages(c("ggplot2", "patchwork", "cowplot"))
+
+# Load libraries
+library(Signac)
+library(Seurat)
+library(EnsDb.Hsapiens.v75)
+library(tidyverse)
+library(biovizBase)
+library(ggplot2)
+library(patchwork)
+library(cowplot)
+
 ## Introduction
 Single-cell Assay for Transposase-Accessible Chromatin using sequencing (**scATAC-seq**) is a technique used to study chromatin accessibility at the single-cell level. This analysis focuses on a **publicly available dataset of human Peripheral Blood Mononuclear Cells (PBMCs)** provided by 10x Genomics.
 
