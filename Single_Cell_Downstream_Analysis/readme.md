@@ -3,6 +3,8 @@
 
 This report outlines the analysis performed on the 10x Genomics Visium dataset (human breast cancer) using the Seurat pipeline in R. The analysis covers data loading, quality control, normalization, dimensionality reduction, clustering, spatial feature analysis, and cell type annotation.
 
+## Download the data: https://www.10xgenomics.com/datasets/human-breast-cancer-visium-fresh-frozen-whole-transcriptome-1-standard
+
 ## 1. Data Loading
 
 - **Gene Expression Data:**  
